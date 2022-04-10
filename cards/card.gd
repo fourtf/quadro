@@ -15,11 +15,23 @@ var card_texture_by_color = {
 # Color of the card
 export(CardColor) var color = CardColor.Colorless; var color_
 
+# show collisions for debugging
+#func _ready():
+#	get_tree().set_debug_collisions_hint(true) 
+
 func _process(delta):
 	if color_ != color:
 		color_ = color
 		$MeshInstance.get_surface_material(0).albedo_texture = card_texture_by_color[color]
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _on_StaticBody_input_event(camera, event, position, normal, shape_idx):
+	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and !event.pressed:
+		print("card clicked")
+
+
+func _on_StaticBody_mouse_entered():
+	print("card entered")
+
+
+func _on_StaticBody_mouse_exited():
+	print("card exited")
