@@ -1,4 +1,4 @@
-extends Node
+extends Spatial
 
 var card_scene = load("res://cards/card.tscn")
 
@@ -6,6 +6,10 @@ var card_scene = load("res://cards/card.tscn")
 func _ready():
 	print("game_scene._ready")
 	
+	# disable placeholder
+	$Placeholder.hide()
+	
+	# add example cards
 	var card_count = 5
 	
 	for i in range(card_count):
@@ -13,7 +17,7 @@ func _ready():
 		card.transform = card_transform(i, card_count)
 		self.add_child(card)
 
-const CARD_SPACING = 1.2
+const CARD_SPACING = 0.8
 const CARD_SCALE = 3
 
 func card_transform(index: int, total_card_count: int) -> Transform:

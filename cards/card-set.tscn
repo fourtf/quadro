@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://cards/card-set.gd" type="Script" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Placeholder" type="MeshInstance" parent="."]
+transform = Transform( -3.32888e-08, -1.99348e-07, 9.72514, -0.166989, 1.91069e-15, -9.32125e-08, 0, -2.00797, -1.87168e-07, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
