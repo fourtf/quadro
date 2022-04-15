@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/green_Draw-2.png-b5cc0d098c9fea15024e35dc21353aaa.stex"
+path="res://.import/yellow_Draw2.png-a562884e29f3012a4de94e6e62340f71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/green_Draw-2.png"
-dest_files=[ "res://.import/green_Draw-2.png-b5cc0d098c9fea15024e35dc21353aaa.stex" ]
+source_file="res://images/yellow_Draw2.png"
+dest_files=[ "res://.import/yellow_Draw2.png-a562884e29f3012a4de94e6e62340f71.stex" ]
 
 [params]
 

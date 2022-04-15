@@ -15,6 +15,7 @@ func _ready():
 	for i in range(card_count):
 		var card = card_scene.instance()
 		card.transform = card_transform(i, card_count)
+		card.set_random()
 		self.add_child(card)
 
 const CARD_SPACING = 0.8
@@ -28,3 +29,6 @@ func card_transform(index: int, total_card_count: int) -> Transform:
 			.scaled(Vector3(CARD_SCALE, CARD_SCALE, CARD_SCALE)) \
 			.rotated(Vector3(0, 1, 0).normalized(), index_adj / -15.0) \
 			.translated(Vector3(index_adj * CARD_SPACING, index_adj / 100.0, 0)) \
+
+func random_card():
+	pass
